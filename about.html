@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="about">
+  <div id="header"></div>
+  <main class="wrap">
+    <article class="page">
+      <div class="prompt">$ cat about.md</div>
+      <h1>안녕하세요, <span data-site="name"></span>입니다.</h1>
+      <div class="meta">보안 · 개발 · 기록</div>
+
+      <p>
+        <!-- TODO: 아래 소개글을 본인 이야기로 바꿔 주세요 -->
+        보안에 관심을 갖고 공부하고 있습니다. 문제를 풀고, 취약점을 분석하고,
+        배운 것을 글로 남기며 성장하는 것을 목표로 합니다.
+        이 블로그는 그 모든 과정을 꾸준히 기록하는 공간입니다.
+      </p>
+
+      <div class="about-grid">
+        <div class="box">
+          <h3>## 관심 분야</h3>
+          <ul><li>웹 보안 / 취약점 분석</li><li>CTF · Wargame</li><li>Bug Bounty</li></ul>
+        </div>
+        <div class="box">
+          <h3>## 목표</h3>
+          <ul><li>매주 1개 이상 기록 남기기</li><li>라이트업 꾸준히 작성</li><li>첫 버그 리포트 제출</li></ul>
+        </div>
+        <div class="box">
+          <h3>## 활동 / 경력</h3>
+          <ul><li>TODO: 동아리·교육 과정</li><li>TODO: 수상 / 자격증</li></ul>
+        </div>
+        <div class="box">
+          <h3>## 연락</h3>
+          <ul>
+            <li><a id="gh" href="#">GitHub</a></li>
+            <li><a id="mail" href="#">Email</a></li>
+          </ul>
+        </div>
+      </div>
+    </article>
+  </main>
+  <div id="footer"></div>
+  <script src="posts.js"></script>
+  <script src="app.js"></script>
+  <script>
+    document.getElementById("gh").href = SITE.github;
+    document.getElementById("mail").href = "mailto:" + SITE.email;
+  </script>
+</body>
+</html>
