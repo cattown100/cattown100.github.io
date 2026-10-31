@@ -6,12 +6,12 @@
    ============================================================ */
 
 const SITE = {
-  name: "내이름",                       // TODO: 본인 이름/닉네임
-  handle: "cattown100",
+  name: "김지우",                       // TODO: 본인 이름/닉네임
+  handle: "cattamer",
   tagline: "배우고, 부수고, 기록합니다.",
   intro: "보안과 개발을 공부하며 학습 과정과 활동 기록을 꾸준히 남기는 공간입니다.",
   github: "https://github.com/cattown100",
-  email: "me@example.com",              // TODO
+  email: "",              // TODO
   tags: ["Security", "Web", "CTF", "Bug Bounty"] // TODO: 관심 키워드
 };
 
