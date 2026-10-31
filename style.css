@@ -7,21 +7,21 @@
   --line: #222b3a;
   --text: #d7dce5;
   --muted: #7f8a9e;
-  --accent: #4ade80;
+  --accent: #f472b6;
   --accent2: #fbbf24;
   --mono: "JetBrains Mono", ui-monospace, monospace;
   --sans: "Pretendard", system-ui, sans-serif;
 }
 :root[data-theme="light"] {
   --bg: #f7f8fa; --panel: #ffffff; --line: #dfe3ea;
-  --text: #1c2230; --muted: #5d6779; --accent: #0f9d58; --accent2: #b45309;
+  --text: #1c2230; --muted: #5d6779; --accent: #db2777; --accent2: #b45309;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
   margin: 0; background: var(--bg); color: var(--text);
   font-family: var(--sans); line-height: 1.7;
-  background-image: radial-gradient(circle at 15% -10%, rgba(74,222,128,.08), transparent 40%);
+  background-image: radial-gradient(circle at 15% -10%, rgba(244,114,182,.12), transparent 40%);
 }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
