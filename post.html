@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>글</title>
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="post">
+  <div id="header"></div>
+  <main class="wrap layout">
+    <div class="col">
+    <article class="article" id="article"></article>
+    </div>
+    <aside class="side" id="side"></aside>
+  </main>
+  <div id="footer"></div>
+  <script src="lib/marked.umd.js"></script>
+  <script src="md.js"></script>
+  <script src="posts.js"></script>
+  <script src="profile.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

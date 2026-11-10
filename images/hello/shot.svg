@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+  <rect width="800" height="420" rx="14" fill="#111112"/>
+  <rect width="800" height="40" rx="14" fill="#1c1c1e"/>
+  <circle cx="26" cy="20" r="6" fill="#ffffff"/><circle cx="48" cy="20" r="6" fill="#8a8a93"/><circle cx="70" cy="20" r="6" fill="#55555c"/>
+  <g font-family="monospace" font-size="18">
+    <text x="30" y="90" fill="#8a8a93">$ git clone cattown100.github.io</text>
+    <text x="30" y="130" fill="#8a8a93">$ vim posts/hello.md</text>
+    <text x="30" y="170" fill="#ffffff">$ git push origin main</text>
+    <text x="30" y="210" fill="#b9b9c2">Deployed: github-pages</text>
+    <text x="30" y="250" fill="#8a8a93">$ _</text>
+  </g>
+</svg>

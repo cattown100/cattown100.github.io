@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>프로필 수정</title>
+  <meta name="robots" content="noindex">
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="profile">
+  <div id="header"></div>
+  <main class="wrap">
+    <section class="page-head">
+      <h1>프로필 수정</h1>
+      <p>첫 화면의 소개 카드와 소개 페이지에 보이는 내용을 고쳐요. <b>저장</b>을 누르면 내 GitHub 저장소에 바로 반영돼요.</p>
+    </section>
+    <div class="write-grid">
+      <div>
+        <div class="panel">
+          <h2>1. 기본 소개 (첫 화면 카드)</h2>
+          <div class="field"><label for="p-name">이름 / 닉네임</label><input id="p-name" type="text" maxlength="40"></div>
+          <div class="field"><label for="p-tagline">한 줄 소개</label><input id="p-tagline" type="text" maxlength="80" placeholder="예: 배우고, 부수고, 기록합니다."></div>
+          <div class="field"><label for="p-intro">소개글</label><textarea id="p-intro" rows="6" placeholder="나는 어떤 사람인지, 이 블로그에 뭘 기록하는지 자유롭게 써 보세요."></textarea></div>
+          <div class="field"><label for="p-tags">관심 키워드 (쉼표로 구분)</label><input id="p-tags" type="text" placeholder="Security, Web, CTF"></div>
+        </div>
+
+        <div class="panel">
+          <h2>2. 소개 페이지 내용 (한 줄에 하나씩)</h2>
+          <div class="field"><label for="p-interests">관심 분야</label><textarea id="p-interests" rows="3"></textarea></div>
+          <div class="field"><label for="p-goals">목표</label><textarea id="p-goals" rows="3"></textarea></div>
+          <div class="field"><label for="p-activities">활동 / 경력</label><textarea id="p-activities" rows="3" placeholder="예: OO 동아리 활동 (2026~)"></textarea></div>
+          <div class="field"><label for="p-certs">수상 · 자격증</label><textarea id="p-certs" rows="3" placeholder="예: 정보처리기사"></textarea></div>
+        </div>
+
+        <div class="panel">
+          <h2>3. 연락처</h2>
+          <div class="field"><label for="p-github">GitHub 주소</label><input id="p-github" type="url" placeholder="https://github.com/아이디"></div>
+          <div class="field"><label for="p-email">이메일</label><input id="p-email" type="email" placeholder="me@example.com"></div>
+        </div>
+
+        <div class="panel">
+          <h2>4. 저장</h2>
+          <div class="field">
+            <label for="f-token">GitHub 토큰</label>
+            <input id="f-token" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_...">
+            <label class="remember"><input type="checkbox" id="f-remember"> 이 컴퓨터에 기억하기</label>
+            <p class="hint">토큰은 내 브라우저에서 GitHub로만 전송돼요. 글쓰기에서 입력했다면 그대로 쓰여요. <a href="#" id="token-help">토큰 만드는 방법</a></p>
+            <ol class="steps" id="token-steps" hidden>
+              <li>GitHub 오른쪽 위 프로필 → <b>Settings → Developer settings</b></li>
+              <li><b>Personal access tokens → Fine-grained tokens → Generate new token</b></li>
+              <li><b>Repository access</b>는 <b>Only select repositories</b>로 이 블로그 저장소 하나만 선택</li>
+              <li><b>Permissions → Repository permissions → Contents: Read and write</b></li>
+              <li>만료일(예: 90일)을 정하고 만들기 → 나온 <code>github_pat_…</code> 값을 위 칸에 붙여넣기</li>
+            </ol>
+          </div>
+          <div class="row2">
+            <div class="field"><label for="f-repo">저장소 (아이디/이름)</label><input id="f-repo" type="text" spellcheck="false"></div>
+            <div class="field"><label for="f-branch">브랜치</label><input id="f-branch" type="text" spellcheck="false"></div>
+          </div>
+          <div class="toolbar"><button class="btn primary lg" type="button" id="btn-save">저장</button><a class="btn lg" href="index.html">취소</a></div>
+          <p class="status" id="post-status" role="status" aria-live="polite"></p>
+          <details class="manual">
+            <summary>직접 올리기 (profile.js 내용을 복사해서 교체)</summary>
+            <p class="hint">저장소의 <code>profile.js</code> 파일을 열어 연필(Edit) 버튼을 누르고, 아래 내용으로 통째로 바꿔 Commit하세요.</p>
+            <pre class="snippet" id="snippet"></pre>
+            <button class="btn sm" type="button" id="copy-snippet">내용 복사</button>
+          </details>
+        </div>
+      </div>
+
+      <aside class="preview panel">
+        <h2>미리보기</h2>
+        <section class="profile" id="pv-profile"></section>
+      </aside>
+    </div>
+  </main>
+  <div id="footer"></div>
+  <script src="posts.js"></script>
+  <script src="profile.js"></script>
+  <script src="gh.js"></script>
+  <script src="app.js"></script>
+  <script src="profile-edit.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>홈</title>
+  <meta name="description" content="학습 과정과 활동 기록을 꾸준히 정리하는 개인 블로그">
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="home">
+  <div id="header"></div>
+  <main class="wrap">
+    <section class="profile home" id="profile" aria-label="내 소개"></section>
+
+    <section class="block">
+      <div class="sec-head">
+        <h2>최근 글</h2>
+        <form class="searchbox mini" id="search-form" role="search">
+          <label class="sr-only" for="search-q">글 검색</label>
+          <input id="search-q" type="search" placeholder="글 검색">
+          <button class="btn sm" type="submit">검색</button>
+        </form>
+      </div>
+      <div id="recent"></div>
+      <div class="more"><a class="btn" href="category.html?c=all">전체 글 보기 →</a></div>
+    </section>
+  </main>
+  <div id="footer"></div>
+  <script src="posts.js"></script>
+  <script src="profile.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
