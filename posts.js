@@ -3,12 +3,12 @@
    1) SITE        : 저장소 / 댓글 설정
    2) CATEGORIES  : 6개 카테고리 (id는 바꾸지 마세요)
    3) POSTS       : 글 목록. 새 글은 맨 위에 한 덩어리 추가!
-      (write.html '글쓰기 도우미'가 이 덩어리를 만들어 줍니다)
+      (본문은 posts/슬러그.md 에 쓰고, 커밋·푸시하면 반영됩니다)
    ============================================================ */
 
 const SITE = {
   handle: "cattamer",
-  repo: "cattown100/cattown100.github.io",   // 등록 버튼/댓글이 쓰는 저장소 (아이디/저장소이름)
+  repo: "cattown100/cattown100.github.io",   // 댓글이 쓰는 저장소 (아이디/저장소이름)
   branch: "main",
   comments: true                             // false 로 바꾸면 댓글이 숨겨져요
   // 이름·소개·연락처는 profile.js 에 있어요 (사이트의 '수정' 버튼으로 고칠 수 있어요)

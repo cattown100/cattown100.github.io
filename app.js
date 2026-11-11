@@ -30,7 +30,6 @@
     '<nav class="nav">' +
     '<a href="category.html?c=all"' + (page === "category" && active === "all" ? ' class="on"' : "") + '>전체 글</a>' +
     '<a href="about.html"' + (page === "about" ? ' class="on"' : "") + '>소개</a>' +
-    '<a class="btn primary sm" href="write.html">글쓰기</a>' +
     '<button id="theme" type="button" title="테마 전환" aria-label="테마 전환">◐</button></nav></div>' +
     '<nav class="tabs" aria-label="카테고리">' + tabs + "</nav></div></header>";
   $("theme").onclick = () => {
@@ -44,7 +43,7 @@
   /* ----- 푸터 ----- */
   $("footer").innerHTML =
     '<footer class="site"><div class="wrap"><span>© ' + new Date().getFullYear() + " " + esc(SITE.name) + " · GitHub Pages</span>" +
-    '<span><a href="' + esc(SITE.github) + '">GitHub</a> · <a href="mailto:' + esc(SITE.email) + '">Contact</a> · <a href="write.html">글쓰기 도우미</a></span></div></footer>';
+    '<span><a href="' + esc(SITE.github) + '">GitHub</a> · <a href="mailto:' + esc(SITE.email) + '">Contact</a></span></div></footer>';
 
   /* ----- 글 목록 ----- */
   function postRow(p) {
@@ -65,7 +64,6 @@
     const allTags = [...new Set(POSTS.flatMap((p) => p.tags || []))].sort();
     const recent = sorted().slice(0, 5).map((p) => '<li><a href="' + postHref(p) + '">' + esc(p.title) + "<small>" + esc(p.date) + "</small></a></li>").join("");
     sideEl.innerHTML =
-      '<a class="btn primary write-btn" href="write.html">글쓰기</a>' +
       (allTags.length ? '<div><h4>태그</h4><div class="tags">' + allTags.map((x) => '<a class="tag" href="category.html?c=all&t=' + encodeURIComponent(x) + '">#' + esc(x) + "</a>").join("") + "</div></div>" : "") +
       (recent ? '<div><h4>최근 글</h4><ul class="recent">' + recent + "</ul></div>" : "");
   }
@@ -81,7 +79,7 @@
     el.innerHTML =
       '<div class="avatar" aria-hidden="true">' + esc((d.name || "?").trim().charAt(0) || "?") + "</div>" +
       '<div class="profile-body"><div class="profile-top"><h1>' + esc(d.name || "이름") + "</h1>" +
-      (withEdit ? '<a class="btn sm" href="profile.html">수정</a>' : "") + "</div>" +
+      "</div>" +
       (d.tagline ? '<p class="tagline">' + esc(d.tagline) + "</p>" : "") +
       (d.intro ? '<p class="intro">' + nl(d.intro) + "</p>" : "") +
       (tags ? '<div class="tags">' + tags + "</div>" : "") +
@@ -134,7 +132,7 @@
     const A = { lead: SITE.intro, interests: SITE.interests, goals: SITE.goals, activities: SITE.activities, certs: SITE.certs };
     const list = (title, arr) => (arr && arr.length) ? '<div class="box"><h3>' + esc(title) + "</h3><ul>" + arr.map((x) => "<li>" + esc(x) + "</li>").join("") + "</ul></div>" : "";
     about.innerHTML =
-      '<div class="profile-top"><h1>안녕하세요, ' + esc(SITE.name) + '입니다.</h1><a class="btn sm" href="profile.html">수정</a></div>' +
+      '<div class="profile-top"><h1>안녕하세요, ' + esc(SITE.name) + '입니다.</h1></div>' +
       '<p class="lead">' + esc(A.lead || "").replace(/\n/g, "<br>") + "</p>" +
       '<div class="about-grid">' + list("관심 분야", A.interests) + list("목표", A.goals) + list("활동", A.activities) + list("수상 · 자격증", A.certs) +
       '<div class="box"><h3>연락</h3><ul><li><a href="' + esc(safeUrl(SITE.github) || "#") + '">GitHub</a></li><li><a href="mailto:' + esc(SITE.email) + '">' + esc(SITE.email) + "</a></li></ul></div></div>";
