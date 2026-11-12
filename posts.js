@@ -29,6 +29,14 @@ const CATEGORIES = [
    - gallery : (선택) 글 아래에 붙는 사진 모음
 */
 const POSTS = [
+   {
+    slug: "review of paper",
+    title: "Cloak, Honey, Trap: Proactive Defenses Against LLM Agents",
+    date: "2026-11-12",
+    category: "papers",
+    tags: ["protection", "AI"],
+    summary: "논문 리뷰"
+  },
   {
     slug: "hello",
     title: "블로그를 시작합니다",
