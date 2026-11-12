@@ -30,7 +30,7 @@ const CATEGORIES = [
 */
 const POSTS = [
    {
-    slug: "review of paper",
+    slug: "review-of-paper",
     title: "Cloak, Honey, Trap: Proactive Defenses Against LLM Agents",
     date: "2026-11-12",
     category: "papers",
