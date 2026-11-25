@@ -30,6 +30,14 @@ const CATEGORIES = [
 */
 const POSTS = [
    {
+    slug: "fuzz",
+    title: "fuzzer와 fuzzing",
+    date: "2026-11-25",
+    category: "docs",
+    tags: ["fuzzer", "fuzzing"],
+    summary: "fuzzer와 fuzzing에 대한 공부"
+  },
+   {
     slug: "ids_ips",
     title: "IDS/IPS에 대해 알아보자",
     date: "2026-11-25",
