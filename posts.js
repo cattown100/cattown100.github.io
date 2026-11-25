@@ -29,6 +29,14 @@ const CATEGORIES = [
    - gallery : (선택) 글 아래에 붙는 사진 모음
 */
 const POSTS = [
+   {
+    slug: "ids_ips",
+    title: "IDS/IPS에 대해 알아보자",
+    date: "2026-11-25",
+    category: "docs",
+    tags: ["IDS", "IPS"],
+    summary: "IDS/IPS에 대한 학습"
+  },
      {
     slug: "me",
     title: "나의 선택 기준과 나이츠프론티어에서 이루고 싶은 것",
