@@ -29,6 +29,14 @@ const CATEGORIES = [
    - gallery : (선택) 글 아래에 붙는 사진 모음
 */
 const POSTS = [
+     {
+    slug: "me",
+    title: "나의 선택 기준과 나이츠프론티어에서 이루고 싶은 것",
+    date: "2026-11-25",
+    category: "docs",
+    tags: ["나이츠프론티어", "3기", "미션", "회고"],
+    summary: "나의 가치관과 선택 기준, 나이츠프론티어 지원동기와 7개월 목표",
+  },
    {
     slug: "review",
     title: "Cloak, Honey, Trap: Proactive Defenses Against LLM Agents",
